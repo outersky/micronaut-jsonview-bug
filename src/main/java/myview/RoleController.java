@@ -10,27 +10,21 @@ public class RoleController {
     @JsonView(View.Public.class)
     @Get()
     Role findAll(){
-        return assetRole();
+        return Role.create();
     }
 
     @JsonView(View.Internal.class)
     @Get("/internal")
     Role findInternal(){
-        return assetRole();
+        return Role.create();
     }
 
     @JsonView(View.Admin.class)
     @Get("/admin")
     Role findAdmin(){
-        return assetRole();
+        return Role.create();
     }
 
-    private Role assetRole(){
-        Role r = new Role();
-        r.setId(1L);
-        r.setName("Role");
-        r.setDesc("Role Desc");
-        return r;
-    }
+
 
 }
