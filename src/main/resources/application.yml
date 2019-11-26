@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: myview
+
+jackson:
+  json-view:
+    enabled: true
